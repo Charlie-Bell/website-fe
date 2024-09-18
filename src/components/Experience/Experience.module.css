@@ -1,0 +1,89 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background-color: var(--color-bg);
+    border-radius: 15px;
+    padding: 45px 73px 45px 73px;
+    margin-top: 43px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experience {
+    width: 35%;
+}
+
+.experienceItems {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.experienceItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    list-style: none;
+    padding: 15px;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+}
+
+.experienceItem:hover {
+    background-color: var(--color-secondary);
+}
+
+.experienceItem h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.experienceItem h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.experienceItem p {
+    font-size: 18px;
+}
+
+.experienceItem ul {
+    margin: 18px 18px 0 18px
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .experienceItems {
+        margin-top: 29px;
+    }
+}

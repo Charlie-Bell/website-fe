@@ -1,0 +1,85 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background-color: var(--color-bg);
+    border-radius: 15px;
+    padding: 45px 73px 45px 73px;
+    margin-top: 43px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text);
+    margin-top: '20px';
+    height: '300px';
+    border: '1px solid #ccc';
+    padding: '10px';
+}
+
+.text {
+    font-size: 18px;
+}
+
+.messageInput {
+    font-size: 18px;
+    width: 80%;
+    padding: 10px;
+    border-style: solid;
+    border-color: var(--color-text);
+    border-radius: 0 0 0 5px;
+}
+
+.messageBtn {
+    font-size: 18px;
+    width: 20%;
+    padding: 10px;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-style: solid;
+    border-color: var(--color-text);
+    border-radius: 0 0 5px 0;
+}
+
+.messageBox {
+    font-size: 18px;
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: var(--color-dark);
+    border-style: solid;
+    border-color: var(--color-text);
+    border-radius: 5px 5px 0 0;
+}
+
+.message {
+    margin-bottom: 10px;
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 25px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+}
