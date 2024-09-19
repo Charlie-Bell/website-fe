@@ -20,6 +20,10 @@ export const Chat = () => {
       setMessageHistory((prevHistory) => [...prevHistory, { text: event.data }]);
     };
 
+    ws.onerror = (error) => {
+      console.log('WebSocket error: ', error);
+    };
+
     ws.onclose = () => {
       console.log('Disconnected from WebSocket server');
     };
