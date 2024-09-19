@@ -10,7 +10,7 @@ export const Chat = () => {
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:80/api/chat');
+    const ws = new WebSocket('ws://charliebell.de/api/chat');
     ws.onopen = () => {
       console.log('Connected to WebSocket server');
     };
