@@ -36,7 +36,9 @@ export const Chat = () => {
     };
   }, []);
 
-  const sendMessage = () => {
+  const sendMessage = (event) => {
+    event.preventDefault();
+    
     if (socket && message) {
       // Send the message to the WebSocket server
       socket.send(message);
@@ -76,7 +78,7 @@ export const Chat = () => {
             placeholder="Type your message..."
             maxLength={150}
           />
-          <button type="submit" className={styles.messageBtn}><strong>Send</strong></button>
+          <button type="submit" className={styles.messageBtn} def><strong>Send</strong></button>
           </form>
         </div>
       </div>
