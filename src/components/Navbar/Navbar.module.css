@@ -28,17 +28,20 @@
 }
 
 .themeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 18px;
-    padding: 4px;
+    padding: 6px;
     transition: opacity 0.2s ease;
-    line-height: 1;
+    color: var(--color-text-muted);
 }
 
 .themeToggle:hover {
     opacity: 0.7;
+    color: var(--color-text);
 }
 
 .menuBtn {

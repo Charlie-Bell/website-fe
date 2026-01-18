@@ -16,6 +16,7 @@
     --color-accent-2: #8b5cf6;
     --color-border: rgba(99, 102, 241, 0.2);
     --color-glow: rgba(99, 102, 241, 0.4);
+    --app-shadow: none;
 
     /* Gradients */
     --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
@@ -34,6 +35,7 @@
     --color-accent-2: #8b5cf6;
     --color-border: #e2e4e9;
     --color-glow: rgba(99, 102, 241, 0.2);
+    --app-shadow: 0 0 80px rgba(0, 0, 0, 0.15);
 
     /* Gradients */
     --gradient-accent: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
