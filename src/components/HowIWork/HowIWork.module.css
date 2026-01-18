@@ -13,20 +13,31 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-accent);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
-.content {
+.principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.principle {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 }
 
-.content p {
+.principleTitle {
     font-size: 17px;
-    line-height: 1.7;
+    font-weight: 600;
     color: var(--color-text);
-    max-width: 600px;
+    margin-bottom: 12px;
+}
+
+.principleDescription {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text-muted);
 }
 
 @media screen and (max-width: 830px) {
@@ -34,7 +45,8 @@
         padding: 60px 24px;
     }
 
-    .content p {
-        font-size: 16px;
+    .principles {
+        grid-template-columns: 1fr;
+        gap: 32px;
     }
 }

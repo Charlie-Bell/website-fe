@@ -1,20 +1,24 @@
 import React from "react";
-
-import styles from "./Hero.module.css"
-import { getImageUrl } from "../../utils";
+import styles from "./Hero.module.css";
 
 export const Hero = () => {
-    return <section className={styles.container}>
-        <div className={styles.content}>
-            <h1 className={styles.title}>Hey! I'm Charlie</h1>
-            <p className={styles.description}>I'm a Machine Learning Engineer with 5 years of building in Python.</p>
-            <div className={styles.btnRow}>
-            <a href="mailto:charlie.james.bell@gmail.com" className={styles.genericBtn}>Contact me</a>
-            <a href="#chat" className={`${styles.genericBtn} ${styles.animationBtn}`}>Chat</a>
+    return (
+        <section className={styles.container}>
+            <div className={styles.content}>
+                <h1 className={styles.title}>
+                    Production-grade LLM systems that companies can actually sell.
+                </h1>
+                <p className={styles.description}>
+                    I help teams turn AI prototypes into reliable, revenue-generating products — especially B2B APIs and customer-facing LLMs.
+                </p>
+                <p className={styles.credibility}>
+                    Senior ML Engineer · Production Systems · B2B Focus
+                </p>
+                <div className={styles.btnRow}>
+                    <a href="#case-studies" className={styles.primaryBtn}>View case studies</a>
+                    <a href="#contact" className={styles.secondaryBtn}>Get in touch</a>
+                </div>
             </div>
-        </div>
-        <img src={getImageUrl("hero/me.jpg")} alt="Photo" className={styles.heroImg}></img>
-        <div className={styles.topBlur} />
-        <div className={styles.bottomBlur} />
-    </section>;
-}
+        </section>
+    );
+};

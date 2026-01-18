@@ -2,27 +2,29 @@
 
 .container {
     position: relative;
-    background-color: var(--color-bg);
-    border-radius: 15px;
-    padding: 45px 73px 45px 73px;
-    margin-top: 43px;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    padding: 48px 56px;
+    margin-top: 32px;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .title {
-    color: var(--color-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    margin-bottom: 32px;
 }
 
 .content {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .experience {
@@ -33,57 +35,77 @@
     color: var(--color-text);
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     width: 100%;
 }
 
 .experienceItem {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 6px;
     list-style: none;
-    padding: 15px;
+    padding: 20px;
     background-repeat: no-repeat;
-    transition: 0.4s;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .experienceItem:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-surface-hover);
+    border-color: var(--color-border);
 }
 
 .experienceItem h3 {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
+    margin-bottom: 4px;
 }
 
 .experienceItem h4 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-accent);
+    margin-bottom: 12px;
 }
 
-
 .experienceItem p {
-    font-size: 18px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
 }
 
 .experienceItem ul {
-    margin: 18px 18px 0 18px
+    margin: 12px 0 0 18px;
+}
+
+.experienceItem ul li {
+    color: var(--color-text-muted);
+    font-size: 15px;
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 830px) {
     .container {
         border-radius: 0;
+        border-left: none;
+        border-right: none;
         margin-left: 0;
         margin-right: 0;
-        margin-top: 25px;
+        margin-top: 24px;
+        padding: 40px 24px;
     }
 
     .content {
         flex-direction: column;
     }
 
+    .experience {
+        width: 100%;
+    }
+
     .experienceItems {
-        margin-top: 29px;
+        margin-top: 0;
     }
 }

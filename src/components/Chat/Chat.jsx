@@ -69,18 +69,16 @@ export const Chat = () => {
           ))}
         </div>
         {/* Message Input */}
-        <div>
-          <form onSubmit={sendMessage}>
-          <input className={styles.messageInput} 
+        <form onSubmit={sendMessage} className={styles.inputRow}>
+          <input className={styles.messageInput}
             type="text"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Type your message..."
             maxLength={150}
           />
-          <button type="submit" className={styles.messageBtn} def><strong>Send</strong></button>
-          </form>
-        </div>
+          <button type="submit" className={styles.messageBtn}>Send</button>
+        </form>
       </div>
     </section>
     </div>

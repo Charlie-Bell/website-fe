@@ -1,0 +1,65 @@
+@import "../../vars.css";
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 24px 120px;
+    border-top: 1px solid var(--color-border);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+}
+
+.link {
+    text-decoration: none;
+    background: var(--gradient-accent);
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px var(--color-glow);
+}
+
+.link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px var(--color-glow);
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        padding: 60px 24px 80px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .link {
+        text-align: center;
+    }
+}

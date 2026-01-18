@@ -1,10 +1,22 @@
+@import "./vars.css";
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-gutter);
+    color: var(--color-text);
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

@@ -1,24 +1,44 @@
 @import "../../vars.css";
 
 .navbar {
-    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 61px;
-    z-index: 2; /* Layer depth (0 is foreground)*/
-    margin: 0 10%; /* 0% X-margin, 10%  Y-margin */
+    padding: 24px;
+    z-index: 100;
 }
 
-.title {
-    font-size: 30px;
+.logo {
+    font-size: 16px;
     font-weight: 600;
-    text-decoration: none; /* Remove underline */
     color: var(--color-text);
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.7;
 }
 
 .menu {
     display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    transition: opacity 0.2s ease;
+    line-height: 1;
+}
+
+.themeToggle:hover {
+    opacity: 0.7;
 }
 
 .menuBtn {
@@ -27,51 +47,81 @@
 
 .menuItems {
     display: flex;
-    gap: 47px; /*Spacing between items*/
-    list-style: none; /*remove bullet points*/
+    gap: 32px;
+    list-style: none;
 }
 
-.menuItems a { /* a means Anchor points */
-    font-size: 25px;
-    color: var(--color-text);
-    text-decoration: none; /* Remove underline */
+.menuItems a {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-/* Media query within max-width 830px has this style */
+.menuItems a:hover {
+    color: var(--color-accent);
+}
+
 @media screen and (max-width: 830px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 20px 24px;
     }
 
     .menu {
-        position: absolute;
-        right: 0;
-        margin-right: 10%;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 11px;
-        z-index: 3;
+        position: relative;
     }
 
     .menuBtn {
         display: block;
         cursor: pointer;
+        font-size: 20px;
+        padding: 4px 8px;
+        border: none;
+        background: none;
+        color: var(--color-text);
+        transition: opacity 0.2s ease;
+    }
+
+    .menuBtn:hover {
+        opacity: 0.7;
     }
 
     .menuItems {
         display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
         flex-direction: column;
-        align-items: center;
-        gap: 13px;
-        border-radius: 10px;
-        background: var(--color-secondary);
-        padding: 24px 33px;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+        gap: 0;
+        background: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+        padding: 0;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .menuItems li {
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .menuItems li:last-child {
+        border-bottom: none;
+    }
+
+    .menuItems a {
+        display: block;
+        padding: 16px 24px;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .menuItems a:hover {
+        background: var(--color-surface);
     }
 
     .menuOpen {
         display: flex;
-        z-index: 1;
+        z-index: 100;
     }
 }
