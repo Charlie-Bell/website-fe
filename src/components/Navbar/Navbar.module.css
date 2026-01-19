@@ -7,7 +7,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px;
-    z-index: 100;
+    position: relative;
+    z-index: 1000;
 }
 
 .logo {
@@ -125,6 +126,6 @@
 
     .menuOpen {
         display: flex;
-        z-index: 100;
+        z-index: 1000;
     }
 }
