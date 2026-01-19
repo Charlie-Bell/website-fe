@@ -30,10 +30,10 @@ export const Contact = () => {
                 <a href="mailto:charlie.james.bell@gmail.com" className={styles.socialLink} aria-label="Email">
                     <EmailIcon />
                 </a>
-                <a href="https://linkedin.com/in/charlie-bell" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/charlie-bell-04989bb5/" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">
                     <LinkedInIcon />
                 </a>
-                <a href="https://github.com/charlie-bell" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
+                <a href="https://github.com/Charlie-Bell" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="GitHub">
                     <GitHubIcon />
                 </a>
             </div>

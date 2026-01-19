@@ -28,7 +28,7 @@ export const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <a href="#" className={styles.logo}>Charlie Bell</a>
+            <a href="#" className={styles.logo}>Bell AI Systems</a>
             <div className={styles.menu}>
                 <button
                     className={styles.themeToggle}
