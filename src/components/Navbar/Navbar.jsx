@@ -28,7 +28,13 @@ export const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <a href="#" className={styles.logo}>Bell AI Systems</a>
+            <a href="#" className={styles.logoLink}>
+                <img
+                    src={theme === 'dark' ? '/assets/nav/logo-wide-dark.png' : '/assets/nav/logo-wide-light.png'}
+                    alt="Bell AI Systems"
+                    className={styles.logo}
+                />
+            </a>
             <div className={styles.menu}>
                 <button
                     className={styles.themeToggle}
